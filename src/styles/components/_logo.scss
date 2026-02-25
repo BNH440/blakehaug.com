@@ -1,0 +1,12 @@
+.logo {
+  img {
+    display: block;
+    width: 75px;
+  }
+
+  @media screen and (max-width: 520px) {
+    img {
+      display: none;
+    }
+  }
+}

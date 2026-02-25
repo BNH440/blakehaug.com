@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Header Component
+// -----------------------------------------------------------------------------
+
+.site-header {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 2em;
+  width: 100%;
+
+  @media screen and (max-width: 520px) {
+    padding: 2em 0;
+  }
+}

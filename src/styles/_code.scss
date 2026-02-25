@@ -1,0 +1,19 @@
+code {
+  font-family: "SF Mono", menlo, inconsolata, monospace;
+  font-size: calc(1em - 2px);
+  color: #555;
+  padding: 0.2em 0.4em;
+  border-radius: 2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+pre {
+  border-radius: 8px !important;
+  margin: 1.2em 0 !important;
+  padding: 1.2em;
+
+  code {
+    padding: 0;
+  }
+}

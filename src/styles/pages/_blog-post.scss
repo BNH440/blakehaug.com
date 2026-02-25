@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// Blog Post Page ([slug].astro)
+// -----------------------------------------------------------------------------
+
+.post-header {
+  text-align: center;
+
+  h1 {
+    margin-bottom: 0.7em;
+  }
+
+  p {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-family: var(--font-family-sans);
+    font-weight: 600;
+  }
+
+  hr {
+    min-width: 100px;
+    width: 30%;
+  }
+}

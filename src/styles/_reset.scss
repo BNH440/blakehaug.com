@@ -1,0 +1,31 @@
+// ==========================================================================
+// Reset & Base Styles
+// ==========================================================================
+
+html {
+  overflow-y: scroll;
+
+  @supports (scrollbar-gutter: stable) {
+    overflow-y: auto;
+    scrollbar-gutter: stable;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--background-body);
+  color: var(--text-main);
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}
