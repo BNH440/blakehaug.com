@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// Footer Component
+// -----------------------------------------------------------------------------
+
 .site-footer {
   color: var(--text-secondary);
   font-size: 0.8em;
@@ -6,4 +10,13 @@
   padding: 1em 2em;
   text-align: center;
   width: 100%;
+
+  a {
+    color: var(--text-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
 }
