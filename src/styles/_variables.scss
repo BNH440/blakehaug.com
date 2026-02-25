@@ -11,8 +11,9 @@
   --theme-code-inline-bg: #f0f0f0;
   --theme-code-inline-text: #36393b;
   --theme-accent: #548e9b;
-  --font-family-serif: Merriweather, serif;
-  --font-family-sans: "Fira Sans", sans-serif;
+  --font-family-body: "IBM Plex Sans", sans-serif;
+  --font-family-sans: "Space Grotesk", sans-serif;
+  --font-family-mono: "IBM Plex Mono", monospace;
 
   &.theme-dark {
     --background-body: #202122;
