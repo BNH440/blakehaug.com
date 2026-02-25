@@ -1,7 +1,6 @@
 # Blog Post Template
 
-Copy the snippet below into a new `.mdx` file in this folder to create a post.
-Name the file with your post slug, e.g. `my-new-post.mdx`.
+Copy the snippet below into a new `.mdx` file in this folder to create a post. Name the file with your post slug, e.g. `my-new-post.mdx`.
 
 Files starting with `_` (like this one) are ignored by the content collection.
 
@@ -51,12 +50,11 @@ Regular markdown still works: **bold**, _italic_, `code`, [links](https://exampl
 
 ## BlogImage props
 
-| Prop      | Type   | Default | Description                                |
-| --------- | ------ | ------- | ------------------------------------------ |
-| `src`     | import | —       | Required. An imported image.               |
-| `alt`     | string | —       | Required. Accessible alt text.             |
-| `caption` | string | —       | Optional. Shown as a figcaption below.     |
-| `width`   | number | 800     | Optional. Max display width in pixels.     |
+| Prop      | Type   | Default | Description                            |
+| --------- | ------ | ------- | -------------------------------------- |
+| `src`     | import | —       | Required. An imported image.           |
+| `alt`     | string | —       | Required. Accessible alt text.         |
+| `caption` | string | —       | Optional. Shown as a figcaption below. |
+| `width`   | number | 800     | Optional. Max display width in pixels. |
 
-Images are automatically converted to WebP, resized, given a responsive
-srcset (1×, 1.5×, 2×), and lazy-loaded. No extra work needed.
+Images are automatically converted to WebP, resized, given a responsive srcset (1×, 1.5×, 2×), and lazy-loaded. No extra work needed.
