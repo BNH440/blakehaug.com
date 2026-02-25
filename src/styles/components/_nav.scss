@@ -6,6 +6,7 @@
   align-items: center;
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
   font-family: var(--font-family-sans);
   font-weight: 700;
   justify-content: flex-end;
@@ -45,13 +46,26 @@
     &.selected::before {
       background: var(--primary-color);
     }
+
+    @media screen and (max-width: 520px) {
+      min-width: auto;
+      margin-left: 0;
+      padding: 8px 8px;
+      font-size: 0.85em;
+    }
   }
 
   .theme-toggle-container {
     width: 75px;
 
     @media screen and (max-width: 520px) {
-      margin-right: 1em;
+      width: auto;
+      margin-left: 4px;
     }
+  }
+
+  @media screen and (max-width: 520px) {
+    justify-content: center;
+    gap: 2px;
   }
 }
