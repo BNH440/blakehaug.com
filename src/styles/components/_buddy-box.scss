@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// Buddy Box – 88×31 button grid
+// -----------------------------------------------------------------------------
+
+.buddy-box {
+  margin: 2em auto;
+  max-width: 600px;
+  text-align: center;
+
+  h2 {
+    font-size: 1.25em;
+    margin-bottom: 0.75em;
+  }
+}
+
+.buddy-box-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+
+  img {
+    display: block;
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
+  }
+}
+
+.buddy-box-link {
+  line-height: 0;
+  transition: opacity 0.15s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.buddy-box-empty {
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.5em;
+}

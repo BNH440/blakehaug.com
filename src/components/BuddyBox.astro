@@ -1,0 +1,30 @@
+---
+interface Button {
+  src: string;
+  alt: string;
+  href?: string;
+}
+
+const buttons: Button[] = [
+  // Add your 88x31 buttons here!
+  // { src: "/assets/buttons/example.gif", alt: "Example", href: "https://example.com" },
+];
+---
+
+<div class="buddy-box">
+  <h2>Buddies</h2>
+  <div class="buddy-box-grid">
+    {buttons.map((button) =>
+      button.href ? (
+        <a href={button.href} target="_blank" rel="noopener noreferrer" class="buddy-box-link">
+          <img src={button.src} alt={button.alt} width="88" height="31" loading="lazy" />
+        </a>
+      ) : (
+        <img src={button.src} alt={button.alt} width="88" height="31" loading="lazy" class="buddy-box-img" />
+      )
+    )}
+  </div>
+  {buttons.length === 0 && (
+    <p class="buddy-box-empty">No buttons yet — check back soon!</p>
+  )}
+</div>
