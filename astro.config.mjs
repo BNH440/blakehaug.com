@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import remarkGfm from "remark-gfm";
 import remarkSmartypants from "remark-smartypants";
 import rehypeExternalLinks from "rehype-external-links";
@@ -8,7 +9,7 @@ import rehypeExternalLinks from "rehype-external-links";
 // https://astro.build/config
 export default defineConfig({
   site: "https://blakehaug.com",
-  integrations: [mdx(), svelte()],
+  integrations: [mdx(), svelte(), sitemap()],
   markdown: {
     shikiConfig: {
       theme: "nord",
@@ -19,6 +20,7 @@ export default defineConfig({
         rehypeExternalLinks,
         {
           target: "_blank",
+          rel: ["noopener", "noreferrer"],
         },
       ],
     ],

@@ -8,6 +8,14 @@ const permalink = `${Astro.site.href}blog`;
 
 let allPosts = await getCollection("posts");
 allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new Date(a.data.publishDate).valueOf());
+
+function formatDate(date: string | Date) {
+  return new Date(date).toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
+}
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink} current="blog">
@@ -25,7 +33,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new 
               </h2>
               <p>{post.data.description}</p>
               <div class="post-item-footer">
-                <span class="post-item-date">— {post.data.publishDate}</span>
+                <span class="post-item-date">— {formatDate(post.data.publishDate)}</span>
               </div>
             </div>
           </div>

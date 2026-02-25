@@ -38,7 +38,7 @@ table {
 }
 
 th {
-  border-bottom: 2px solid #cccccc;
+  border-bottom: 2px solid var(--border-color);
   padding: 0.4em 0.8em;
   word-break: break-word;
 }

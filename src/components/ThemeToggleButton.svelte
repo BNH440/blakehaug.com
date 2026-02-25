@@ -1,11 +1,8 @@
 <script>
-  let rootEl;
-  import { onMount } from 'svelte';
   const themes = ['light', 'dark'];
-  let theme = ''
+  let theme = $state('');
 
-  onMount(() => {
-    rootEl = document.documentElement;
+  $effect(() => {
     if (localStorage.getItem('theme')) {
       theme = localStorage.getItem('theme');
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -15,15 +12,18 @@
     }
   });
 
+  $effect(() => {
+    const rootEl = document.documentElement;
+    if (theme === 'light') {
+      rootEl.classList.remove('theme-dark');
+    } else if (theme === 'dark') {
+      rootEl.classList.add('theme-dark');
+    }
+  });
+
   function handleChange(event) {
     theme = event.target.value;
     localStorage.setItem('theme', theme);
-  }
-
-  $: if (rootEl && theme === 'light') {
-    rootEl.classList.remove('theme-dark');
-  } else if (rootEl && theme === 'dark') {
-    rootEl.classList.add('theme-dark');
   }
 
   const icons = [
@@ -64,7 +64,7 @@
         value={t}
         title={`Use ${t} theme`}
         aria-label={`Use ${t} theme`}
-        on:change={handleChange}
+        onchange={handleChange}
       />
     </label>
   {/each}

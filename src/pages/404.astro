@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "404 – Page Not Found";
+const description = "The page you're looking for doesn't exist.";
+const permalink = `${Astro.site.href}404`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+  <div class="not-found">
+    <h1>404</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <a href="/">Go Home</a>
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    padding: 2em;
+
+    h1 {
+      font-size: 8em;
+      margin: 0;
+      line-height: 1;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-size: 1.4em;
+      color: var(--text-secondary);
+      margin: 0.5em 0 1.5em;
+    }
+
+    a {
+      font-family: var(--font-family-sans);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.95em;
+      text-decoration: none;
+      color: var(--primary-color);
+      padding: 0.5em 1em;
+      border: 2px solid var(--primary-color);
+      border-radius: 4px;
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+      &:hover {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+    }
+  }
+</style>

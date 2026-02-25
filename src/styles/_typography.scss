@@ -115,7 +115,7 @@ p a {
 // ---------------------------------------------------------------------------
 
 blockquote {
-  border-left: 4px solid #cccccc;
+  border-left: 4px solid var(--border-color);
   font-size: 1.4em;
   font-style: italic;
   margin: 2rem 0;
