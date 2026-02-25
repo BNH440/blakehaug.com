@@ -1,8 +1,14 @@
 ---
-import { Image } from "astro:assets";
-import logoSrc from "../assets/logo.webp";
+import { siteConfig } from "../data/site";
+
+const { current = "" } = Astro.props;
+const isHome = current === "";
 ---
 
-<a class="logo" href="/">
-  <Image alt="Blake Haug" src={logoSrc} width={75} height={50} />
-</a>
+{
+  !isHome && (
+    <a class="logo" href="/">
+      {siteConfig.name}
+    </a>
+  )
+}

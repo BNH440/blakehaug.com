@@ -1,12 +1,22 @@
+// -----------------------------------------------------------------------------
+// Logo Component
+// -----------------------------------------------------------------------------
+
 .logo {
-  img {
-    display: block;
-    width: 75px;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--text-main);
+  white-space: nowrap;
+
+  &:hover {
+    color: var(--primary-color);
   }
 
-  @media screen and (max-width: 520px) {
-    img {
-      display: none;
-    }
+  @media screen and (max-width: 650px) {
+    display: none;
   }
 }
