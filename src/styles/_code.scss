@@ -1,7 +1,7 @@
 code {
   font-family: "SF Mono", menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
-  color: #555;
+  color: var(--text-main);
   padding: 0.2em 0.4em;
   border-radius: 2px;
   -webkit-font-smoothing: antialiased;
@@ -15,5 +15,6 @@ pre {
 
   code {
     padding: 0;
+    color: inherit;
   }
 }
