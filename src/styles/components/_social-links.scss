@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// Social Links Icons Component
+// -----------------------------------------------------------------------------
+
+.social-links-icons {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      color: var(--primary-color);
+      transform: scale(1.15);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+}

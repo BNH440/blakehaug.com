@@ -1,3 +1,8 @@
+---
+import { Image } from "astro:assets";
+import logoSrc from "../assets/logo.webp";
+---
+
 <a class="logo" href="/">
-  <img alt="Blog Logo" src="/assets/logo.webp" width="75" height="50" />
+  <Image alt="Blog Logo" src={logoSrc} width={75} height={50} />
 </a>

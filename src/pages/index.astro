@@ -1,29 +1,30 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import { siteConfig } from "../data/site";
 
-const title = "Blake Haug";
-const description = "The perfect starter for your perfect blog.";
+const title = siteConfig.name;
+const description = siteConfig.tagline;
 const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
   <div class="home-container">
     <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
+      <h1>{siteConfig.name}</h1>
+      <p>{siteConfig.tagline}</p>
+      <p>{siteConfig.description}</p>
+      <div class="home-links">
+        <a href="/about">About Me</a>
+        <a href="/projects">Projects</a>
+        <a href="/blog">Blog</a>
+      </div>
     </div>
 
     <div class="hero-image-container">
-      <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)" />
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466" />
-      </picture>
-      <p class="caption">
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </p>
+      <Image class="hero-image" src={siteConfig.profileImage} alt={siteConfig.name} width={300} densities={[1.5, 2]} />
+      <SocialLinks size={28} />
     </div>
   </div>
 </BaseLayout>

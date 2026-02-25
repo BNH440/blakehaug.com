@@ -21,7 +21,7 @@
 
   h1 {
     font-weight: 700;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     line-height: 1.3;
   }
 
@@ -40,28 +40,53 @@
   }
 }
 
+.home-links {
+  display: flex;
+  gap: 1.5em;
+  margin-top: 1.5em;
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.95em;
+
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 0.5em 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 .hero-image-container {
   margin: 0 1em;
   text-align: center;
 
-  picture {
-    display: block;
-    min-height: 250px;
+  .social-links-icons {
+    justify-content: center;
   }
-}
-
-.caption {
-  font-size: 0.8em;
-  font-style: italic;
-  text-align: left;
 }
 
 .hero-image {
   width: 100%;
-  max-width: 550px;
+  max-width: 300px;
+  border-radius: 50%;
   margin-bottom: 1em;
 
   @media (max-width: 1200px) {
-    max-width: 400px;
+    max-width: 250px;
   }
 }

@@ -25,24 +25,34 @@ h1 {
 }
 
 h2 {
-  margin: 1.6em 0 0 0;
-  font-size: 1.8em;
+  margin: 1.6em 0 0.4em 0;
+  font-size: 2.2em;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.35em;
+  font-weight: 700;
+  color: var(--text-secondary);
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: 1.15em;
+  font-weight: 600;
 }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 1.05em;
+  font-weight: 600;
 }
 
 h6 {
-  font-size: 1.2em;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 p,
