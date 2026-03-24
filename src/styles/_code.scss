@@ -1,4 +1,4 @@
-code {
+:not(pre) > code {
   font-family: var(--font-family-mono);
   font-size: 0.9em;
   color: var(--text-main);
@@ -13,7 +13,10 @@ pre {
   padding: 1.2em;
 
   code {
+    font-family: var(--font-family-mono);
+    font-size: 0.9em;
     padding: 0;
     color: inherit;
+    background-color: transparent;
   }
 }
