@@ -7,13 +7,14 @@ interface Button {
 
 const buttons: Button[] = [
   { src: "/assets/buttons/blakeh.gif", alt: "blakeh", href: "#" },
-  { src: "/assets/buttons/ocf.png", alt: "hosted by the OCF", href: "#" },
-  { src: "/assets/buttons/nixos.png", alt: "powered by NixOS", href: "#" },
+  { src: "/assets/buttons/ocf.png", alt: "hosted by the OCF", href: "https://ocf.berkeley.edu" },
+  { src: "/assets/buttons/nixos.png", alt: "powered by NixOS", href: "https://nixos.org" },
+  { src: "/assets/buttons/tianchenggu.png", alt: "tianchenggu", href: "https://tianchenggu.org/" },
 ];
 ---
 
 <div class="buddy-box">
-  <h2>Buddies</h2>
+  <h2>Buttons</h2>
   <div class="buddy-box-grid">
     {buttons.map((button) =>
       button.href ? (
