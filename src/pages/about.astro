@@ -20,11 +20,34 @@ const permalink = `${Astro.site.href}about`;
         <h3>Hello! 👋</h3>
         <p>{siteConfig.description}</p>
         <p>
+          I serve on the Board of Directors and work as Operations Staff at the <a
+            href="https://ocf.berkeley.edu"
+            target="_blank"
+            rel="noopener">Open Computing Facility (OCF)</a
+          > on campus, where I help lead the organization and manage our infrastructure.
+        </p>
+        <p>
+          I'm very involved with IaC and linux system administration in the OCF and at home, using <a
+            href="https://nixos.org"
+            target="_blank"
+            rel="noopener">NixOS</a
+          > to build and maintain reproducible configurations across my <a
+            href="https://github.com/BNH440/nix"
+            target="_blank"
+            rel="noopener">homelab machines</a
+          > and <a href="https://github.com/ocf/nix" target="_blank" rel="noopener">OCF desktops and servers</a>. As
+          part of the OCF, I've also been doing systems programming in Rust, writing applets for the <a
+            href="https://system76.com/cosmic"
+            target="_blank"
+            rel="noopener">COSMIC</a
+          > desktop environment, which we use on our lab machines.
+        </p>
+        <p>
           You can contact me at{" "}
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
         </p>
 
-        <SocialLinks size={22} />
+        <SocialLinks size={28} />
       </div>
     </div>
   </div>

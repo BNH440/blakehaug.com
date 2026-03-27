@@ -17,9 +17,9 @@ export const siteConfig = {
    * Written in plain text (no HTML).
    */
   description:
-    "I'm a 2nd year at UC Berkeley for Electrical Engineering and Computer Sciences, " +
-    "interested in many different areas of technology including programming web/mobile apps, " +
-    "server-side software, APIs, automation scripts, and robots!",
+    "I'm a 2nd year EECS student at UC Berkeley, " +
+    "currently focused on infrastructure as code (IaC) and systems programming. " +
+    "I'm also interested in many different areas of technology including programming web/mobile apps, server-side software, APIs, automation scripts, and robots!",
 
   /** Contact email – displayed on the About page and used for the mail link. */
   email: "blake@blakehaug.com",
