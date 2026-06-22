@@ -16,7 +16,7 @@
 }
 
 .home-copy {
-  flex: 1;
+  /* flex: 1; */
   padding: 0 1em;
 
   h1 {
@@ -27,6 +27,7 @@
 
   p {
     font-size: 1.4em;
+    max-width: 65ch;
 
     @media (max-width: 1200px) {
       font-size: 1.2em;
@@ -81,10 +82,13 @@
 }
 
 .hero-image {
-  width: 100%;
-  max-width: 300px;
+  max-width: 225px;
   border-radius: 50%;
   margin-bottom: 1em;
+
+  img {
+    width: 100%;
+  }
 
   @media (max-width: 1200px) {
     max-width: 250px;
