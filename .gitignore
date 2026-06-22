@@ -5,8 +5,9 @@ dist/
 # generated types
 .astro/
 
-# dependencies
+# dependencies / pnpm
 node_modules/
+pnpm-workspace.yaml
 
 # logs
 npm-debug.log*
@@ -21,3 +22,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# direnv / nix
+.direnv/
+flake.lock
