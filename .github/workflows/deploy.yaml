@@ -32,6 +32,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "dist/"
-          REMOTE_HOST: "blake.ocf.berkeley.edu"
-          REMOTE_USER: "deploy"
-          TARGET: "/var/www/blakehaug.com/"
+          REMOTE_HOST: ${{ vars.DEPLOY_HOST }}
+          REMOTE_USER: ${{ vars.DEPLOY_USER }}
+          TARGET: ${{ vars.DEPLOY_DIR }}
